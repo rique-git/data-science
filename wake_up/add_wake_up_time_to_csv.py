@@ -14,4 +14,4 @@ with open("wake_up_data.csv", "r") as file:
     # and if not add the data to the csv
     if data[-1].split(",")[0] != date:
         with open("wake_up_data.csv", "a") as file:
-            file.write(f"\n{date},{time},,,,,,,,,,,,,")
+            file.write(f"\n{date},{time},,,,,,,,,,,,,,,,")

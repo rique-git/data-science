@@ -24,15 +24,18 @@ questions = [
     "Did you READ today? [yes/no]",
     "Did you play VIDEO GAMES today? [yes/no]",
     "Did you WORK today? [yes/no]",
-    "Did you HANG OUT with friends [yes/no]"
+    "Did you HANG OUT with friends [yes/no]",
+    "Did you play CHESS today? [yes/no]",
+    "Did you watch anime today? [yes/no]",
+    "Did you watch films/series today? [yes/no]"
 ]
 
 # Get yes/no input for each question
 answers = [get_yes_no_input(question) for question in questions]
 
 # Additional input for non-yes/no questions
-answers.append(input("What NEW SKILL did you train today?: "))
-answers.append(float(input("How much WATER in L did you drink today?: ")))
+answers.append(input("What NEW SKILL did you train today? [If none just press Enter]:"))
+answers.append(float(input("How much WATER in L did you drink today? ")))
 answers.append(float(input("Finally, HOW WAS YOUR DAY from 1 to 5?: [Excelent: 5/Good: 4/Satisfactory: 3/Fair: 2/Unsatisfactory: 1]: ")))
 
 
