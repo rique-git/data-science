@@ -10,19 +10,18 @@ data = data.head(0)
 parser = argparse.ArgumentParser()
 
 # Add positional arguments
-parser.add_argument('username', type=str, help='Specify a riot EUW username')
+parser.add_argument('username', nargs='+', type=str, help='Specify a riot EUW username')
 parser.add_argument('riotAPIkey', type=str, help='Specify a riot API key')
 
-# Parse the command-line arguments
+# Parse the command line arguments
 args = parser.parse_args()
 
-# Access the arguments
-username = args.username
+# Access the values
+username = ' '.join(args.username)
 riotAPIkey = args.riotAPIkey
 
-# Your script logic using the arguments
-print(f"EUW username specified: {username}")
-print(f"Riot API key specified: {riotAPIkey}")
+print(f'Username: {username}')
+print(f'API Key: {riotAPIkey}')
 
 
 # Create request key to SummonerV4 API
@@ -37,7 +36,7 @@ player_puuid = resp.json()["puuid"]
 print("Player PUUID          :", player_puuid)
 
 # Send request to MatchV5 (success = 200)
-request_match_api = "https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/_G2gRRCcbjdmZD1a54PdNPQl7zTSrbHsujrLJRwUAu50GKwvr44eARdP20y22sIxVeP0_YD0Ydyflw/ids?start=0&count=100"
+request_match_api = "https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/" + player_puuid + "/ids?start=0&count=100"
 matchV5_request_key = request_match_api + "&api_key=" + riotAPIkey
 resp = requests.get(matchV5_request_key)
 print("\nRequest to MatchV5    :", resp, "\n")
@@ -50,7 +49,10 @@ for match_id in matches_ids[:-1]:
     request_match_link = "https://europe.api.riotgames.com/lol/match/v5/matches/" + match_id + "?api_key=" + riotAPIkey
     resp = requests.get(request_match_link)
     print("Request to MatchV5 matches :", resp)
-    games_info.append(resp)
+    if resp.status_code == 200:
+        games_info.append(resp)
+    else:
+        print("game not added")
 
 
 for i in games_info:
