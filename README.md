@@ -22,9 +22,7 @@ The repository is thoughtfully organized to facilitate easy navigation through d
 
 ## Contributing
 
-External contributions are welcome, and this repository adheres to the [MIT License](https://opensource.org/licenses/MIT).
-
-If you wish to contribute:
+External contributions are welcome, so if you wish to contribute:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
