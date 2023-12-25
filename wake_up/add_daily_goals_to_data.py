@@ -27,7 +27,8 @@ questions = [
     "Did you HANG OUT with friends [yes/no]",
     "Did you play CHESS today? [yes/no]",
     "Did you watch anime today? [yes/no]",
-    "Did you watch films/series today? [yes/no]"
+    "Did you watch films/series today? [yes/no]",
+    "Did you streach today? [yes/no]"
 ]
 
 # Get yes/no input for each question
