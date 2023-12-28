@@ -41,7 +41,7 @@ answers.append(float(input("Finally, HOW WAS YOUR DAY from 1 to 5?: [Excelent: 5
 
 
 # Run add_wake_up_time_to_csv in case I forgot
-subprocess.run(['python3', 'add_wake_up_time_to_csv.py'])
+subprocess.run(['python3', 'add_wake_up_time_to_data.py'])
 
 # Open data as a dataframe
 data = pd.read_csv("wake_up_data.csv", index_col="date")
