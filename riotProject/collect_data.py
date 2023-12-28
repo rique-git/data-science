@@ -57,7 +57,10 @@ for match_id in matches_ids[:-1]:
 
 for i in games_info:
     game_info = i.json()
-
+    #print(game_info["info"]["gameMode"])
+    print(game_info["info"]["gameMode"])
+    if game_info["info"]["gameMode"] == "CHERRY" :
+        continue
     date = datetime.fromtimestamp(int(str(game_info["info"]["gameCreation"])[:10]))
     game_type = game_info["info"]["gameMode"]
 
