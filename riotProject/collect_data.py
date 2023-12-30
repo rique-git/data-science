@@ -57,15 +57,16 @@ for match_id in matches_ids[:-1]:
 
 for i in games_info:
     game_info = i.json()
-    #print(game_info["info"]["gameMode"])
-    print(game_info["info"]["gameMode"])
-    if game_info["info"]["gameMode"] == "CHERRY" :
+    
+    if game_info["info"]["gameMode"] != "CLASSIC" and game_info["info"]["gameMode"] != "ARAM":
         continue
     date = datetime.fromtimestamp(int(str(game_info["info"]["gameCreation"])[:10]))
     game_type = game_info["info"]["gameMode"]
 
     blue_team = []
     red_team = []
+    blue_team_names = []
+    red_team_names = []
 
     for player in game_info["info"]["participants"]:
         if player["summonerName"] == username:
@@ -81,26 +82,33 @@ for i in games_info:
 
         elif player["teamId"] == 100:
             blue_team.append(player["championName"])
+            blue_team_names.append(player["summonerName"])
         else:
             red_team.append(player["championName"])
+            red_team_names.append(player["summonerName"])
     
 
 
     # Create CSV with data
     #datetime,game type,champion played,team,position,win,alied1,alied2,alied3,alied4,enemy1,enemy2,enemy3,enemy4,enemy5
-    alied_team = []
-    enemy_team = []
+
 
     if len(blue_team) == 4: 
         alied_team = blue_team
         enemy_team = red_team
+        alied_team_names = blue_team_names
+        enemy_team_names = red_team_names
     else:
         alied_team = red_team
         enemy_team = blue_team
+        alied_team_names = red_team_names
+        enemy_team_names = blue_team_names
             
     new_row_data = {'game type': game_type, 'champion played': champion, 'team': team, 'position': position\
                     , 'win': win, 'alied1': alied_team[0], 'alied2': alied_team[1], 'alied3': alied_team[2], 'alied4': alied_team[3]\
-                    , 'enemy1': enemy_team[0], 'enemy2': enemy_team[1], 'enemy3': enemy_team[2], 'enemy4': enemy_team[3], 'enemy5': enemy_team[4]}
+                    , 'enemy1': enemy_team[0], 'enemy2': enemy_team[1], 'enemy3': enemy_team[2], 'enemy4': enemy_team[3], 'enemy5': enemy_team[4]\
+                    , 'alied1name': alied_team_names[0], 'alied2name': alied_team_names[1], 'alied3name': alied_team_names[2], 'alied4name': alied_team_names[3]\
+                    , 'enemy1name': enemy_team_names[0], 'enemy2name': enemy_team_names[1], 'enemy3name': enemy_team_names[2], 'enemy4name': enemy_team_names[3], 'enemy5name': enemy_team_names[4]}
     data.loc[date] = new_row_data
 
 data.to_csv("games_data.csv", index=True)
