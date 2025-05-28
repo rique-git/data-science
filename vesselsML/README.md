@@ -1,0 +1,1 @@
+This is Dannys code. From modern machine learning into practice course in NTNU Norway.
