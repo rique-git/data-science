@@ -1,0 +1,1 @@
+Data collection from the Riot API (League of Legends) and insight extraction through data visualization.
