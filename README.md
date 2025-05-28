@@ -18,6 +18,6 @@ Welcome to the repository for personal data science projects. This space encompa
 
 ## Contact
 
-For any questions or inquiries, feel free to reach out to the repository owner.
+For any questions or inquiries, feel free to reach out to me.
 
 Happy coding!
