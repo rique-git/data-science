@@ -31,6 +31,11 @@ You can run the program in one of two ways:
 3. Install it using pip: pip install .
 4. After installation, you can run the tool directly from the command line: jungle_aggregator
 
+### Option 3: Run GUI
+1. Navigate into the folder dash_GUI
+2. Run the script app.py
+3. Open the URL in the browser (usually http://127.0.0.1:8050/)
+
 ---
 
 ## 📝 What It Does
