@@ -5,7 +5,7 @@ def main():
     parquet_path = input("Enter the path to the parquet file (jungle_case_1_data): ")
     start_day = input("Enter the start date (YYYY-MM-DD): ").strip()
     end_day = input("Enter the end date (YYYY-MM-DD): ").strip()
-    agg_type = input("Enter aggregation type (mean/median/max/min/std): ").strip().lower()
+    agg_type = input("Enter aggregation type (mean/median/max/min/std/sum): ").strip().lower()
 
     data = pd.read_parquet(parquet_path)
     df = data.loc[start_day:end_day].copy()

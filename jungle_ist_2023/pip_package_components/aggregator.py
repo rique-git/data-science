@@ -40,6 +40,8 @@ def aggregate_timeseries(df, n_chunks, method):
         z_agg = np.nanmin(z_reshaped, axis=1)
     elif method == 'std':
         z_agg = np.nanstd(z_reshaped, axis=1)
+    elif method == 'sum':
+        z_agg = np.nansum(z_reshaped, axis=1)
     else:
         raise ValueError(f"Unsupported aggregation method: {method}")
 
