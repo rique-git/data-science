@@ -1,4 +1,4 @@
-Estágio,Hospital,Dia,Sexo,Razão,Solução,Famílias,Amputação,Protetização,Causa da amputação
+Estágio,Local,Dia,Sexo,Razão,Solução,Famílias,Amputação,Protetização,Causa da amputação
 1,Santa Maria,12,Homem,,Fraldas e creme,Incontinência,,,
 1,Santa Maria,12,Mulher,Fratura,Imobilizador do úmero,Ortopedia,,,
 1,Santa Maria,12,Mulher,Operação,Sutiã cirurgico,Material pós cirurgia,,,
@@ -99,10 +99,10 @@ Estágio,Hospital,Dia,Sexo,Razão,Solução,Famílias,Amputação,Protetização
 3,SIORTO,26,Homem,,,,Transfemural,Ajustes,Traumática
 3,SIORTO,26,Homem,,,,Transtibial,1º vez,Vascular
 3,SIORTO,26,Homem,,,,Transtibial,Ajustes,Infeciosa
-3,SIORTO,26,Mulher,,,,Transfemural ,1º vez,Vascular
+3,SIORTO,26,Mulher,,,,Transfemural,1º vez,Vascular
 3,SIORTO,26,Homem,,,,Transtibial,1º vez,Traumática
-3,SIORTO,26,Homem,,,,Transfemural ,Prótese Nova,Vascular
-3,SIORTO,26,Homem,,,,Transfemural ,1º vez,Traumática
+3,SIORTO,26,Homem,,,,Transfemural,Prótese Nova,Vascular
+3,SIORTO,26,Homem,,,,Transfemural,1º vez,Traumática
 3,SIORTO,26,Homem,,,,Transtibial,Ajustes,Traumática
 3,SIORTO,26,Mulher,,,,Transtibial,Prótese Nova,Traumática
-3,SIORTO,26,Mulher,,,,Transfemural ,1º vez,Traumática
+3,SIORTO,26,Mulher,,,,Transfemural,1º vez,Traumática
