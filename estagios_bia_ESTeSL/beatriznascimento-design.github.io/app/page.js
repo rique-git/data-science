@@ -404,21 +404,21 @@ export default function Page() {
                     <PolarAngleAxis dataKey="phase" tick={{ fontSize: 11 }} />
                     <PolarRadiusAxis tick={{ fontSize: 10 }} />
                     <Radar
-                      name="Normal Min"
-                      dataKey="normalMin"
-                      stroke={COLORS.NormalRange}
-                      fill={COLORS.NormalRange}
-                      fillOpacity={0.08}
-                      strokeDasharray="4 3"
-                      legendType="none"
-                    />
-                    <Radar
                       name="Normal Range"
                       dataKey="normalMax"
                       stroke={COLORS.NormalRange}
                       fill={COLORS.NormalRange}
-                      fillOpacity={0.15}
+                      fillOpacity={0.18}
                       strokeDasharray="4 3"
+                    />
+                    <Radar
+                      name="Normal Min"
+                      dataKey="normalMin"
+                      stroke={COLORS.NormalRange}
+                      fill="white"
+                      fillOpacity={1}
+                      strokeDasharray="4 3"
+                      legendType="none"
                     />
                     <Radar
                       name="Before"
